@@ -1,65 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MerajVlog | Coding & Life Blog</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f6fa;
-      color: #2f3640;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #273c75;
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 2rem;
-    }
-    h2 {
-      color: #192a56;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #dcdde1;
-      margin-top: 2rem;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to MerajVlog</h1>
-    <p>Sharing coding tutorials, life updates, and creative thoughts 💡</p>
-  </header>
-  <main>
-    <h2>Hello World!</h2>
-    <p>
-      This is my first blog post on <b>MerajVlog</b>.  
-      I’ll be sharing coding tutorials, life experiences, and creative thoughts here.  
-      Stay tuned for more updates!
-    </p>
-    <p><i>Published on: October 23, 2025</i></p>
+  <main class="calculator" role="application" aria-label="Simple calculator">
+    <input
+      id="display"
+      class="display"
+      type="text"
+      inputmode="none"
+      aria-label="Calculator display"
+      readonly
+      value="0"
+    />
+
+    <div class="buttons" role="group" aria-label="Calculator buttons">
+      <!-- Row 1 -->
+      <button class="btn control" data-action="clear">C</button>
+      <button class="btn control" data-action="backspace">←</button>
+      <button class="btn control" data-value="(">(</button>
+      <button class="btn operator" data-value=")">)</button>
+
+      <!-- Row 2 -->
+      <button class="btn number" data-value="7">7</button>
+      <button class="btn number" data-value="8">8</button>
+      <button class="btn number" data-value="9">9</button>
+      <button class="btn operator" data-value="÷">÷</button>
+
+      <!-- Row 3 -->
+      <button class="btn number" data-value="4">4</button>
+      <button class="btn number" data-value="5">5</button>
+      <button class="btn number" data-value="6">6</button>
+      <button class="btn operator" data-value="×">×</button>
+
+      <!-- Row 4 -->
+      <button class="btn number" data-value="1">1</button>
+      <button class="btn number" data-value="2">2</button>
+      <button class="btn number" data-value="3">3</button>
+      <button class="btn operator" data-value="-">−</button>
+
+      <!-- Row 5 -->
+      <button class="btn number" data-value="0">0</button>
+      <button class="btn number" data-value=".">.</button>
+      <button class="btn equal" data-action="equals">=</button>
+      <button class="btn operator" data-value="+">+</button>
+    </div>
   </main>
-  <footer>
-    © 2025 MerajVlog — Built with ❤️ and GitHub Pages
-  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
